@@ -1,17 +1,18 @@
 import java.io.File;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 
-public class Manager extends Human implements IReadableHuman {
+public class Manager extends Human implements Comparable<Human> {
 
     private static final File file = new File("Managers.txt");
     private String department;
 
     public Manager(String surname, String name, int yearOfBirth, String phoneNumber, String department) {
         super(surname, name, yearOfBirth, phoneNumber);
-        if (department != "") {
+        if (department.intern() != "") {
             this.department = department;
-        }
-        else throw new IllegalArgumentException("You have not entered department");
+        } else throw new IllegalArgumentException("You have not entered department");
     }
 
     public String getDepartment() {
@@ -19,15 +20,24 @@ public class Manager extends Human implements IReadableHuman {
     }
 
     public void setDepartment(String department) {
-        this.department = department;
+        if (department.intern() == "") {
+            System.out.println("You have entered empty department");
+        }
+        else {
+            this.department = department;
+        }
     }
 
     public void addToBook() {
-        String record = prepareString();
+        String record = toString();
         FileWorker.writeRecordToFile(file, record);
     }
 
-    private String prepareString() {
+    /*public static void sortBySurname(LinkedList<Manager> managers) {
+        Collections.sort(managers);
+    }*/
+
+    public String toString() {
         return this.getSurname() + ", "
                 + this.getName() + ", "
                 + this.getYearOfBirth() + ", "
@@ -48,5 +58,11 @@ public class Manager extends Human implements IReadableHuman {
             managers.add(manager);
         }
         return managers;
+    }
+
+    @Override
+    public int compareTo(Human manager) {
+        int result = this.getSurname().compareTo(manager.getSurname());
+        return result;
     }
 }

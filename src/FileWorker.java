@@ -1,5 +1,3 @@
-import sun.awt.image.ImageWatched;
-
 import java.io.*;
 import java.util.LinkedList;
 
@@ -8,17 +6,17 @@ public class FileWorker<T> {
     private static final File employeeFile = new File("Employees.txt");
     private static final File managerFile = new File("Managers.txt");
 
-    public static LinkedList<?> loadRecords(File file) {
+    public static LinkedList<? extends Human> loadRecords(File file) {
         String textFromFile = readFile(file);
         if (textFromFile != null) {
             String[] splittedText = textFromFile.split(";");
             if (file.getName() == "Employees.txt") {
                 return Employee.getEmployeesList(splittedText);
-            } else {
+            } else if (file.getName() == "Managers.txt"){
                 return Manager.getManagersList(splittedText);
             }
         }
-        else return null;
+        return null;
     }
 
     private static String readFile(File file) {
@@ -26,7 +24,8 @@ public class FileWorker<T> {
             if (file.exists()) {
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 String line = br.readLine();
-                return String.valueOf(line);
+                br.close();
+                return line;
             } else {
                 System.out.println("File does not exist");
                 return null;
@@ -38,7 +37,6 @@ public class FileWorker<T> {
         }
         return null;
     }
-
 
 
     public static void writeRecordToFile(File file, String record) {
@@ -56,17 +54,19 @@ public class FileWorker<T> {
         }
     }
 
-    public static void rewriteFile(File file, LinkedList<?> records) {
-        try {   
-            file.delete();
-            file.createNewFile();
-            FileWriter fw = new FileWriter(file);
+    public static void rewriteFile(File file, LinkedList<? extends Human> records) {
+        if (file.delete()) System.out.println("File deleted");
+        if (records.get(0).getClass().getSimpleName() == "Employee") {
             for (int i = 0; i < records.size(); i++) {
-                fw.write(records.get(i));
+                Employee employee = (Employee) records.get(i);
+                employee.addToBook();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } else {
+            for (int i = 0; i < records.size(); i++) {
+                Manager manager = (Manager) records.get(i);
+                manager.addToBook();
+            }
 
+        }
     }
 }

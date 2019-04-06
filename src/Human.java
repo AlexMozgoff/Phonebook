@@ -3,9 +3,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.GregorianCalendar;
+import java.util.LinkedList;
 
-public abstract class Human {
+public abstract class Human implements Comparable<Human> {
 
     private String surname;
     private String name;
@@ -77,11 +79,11 @@ public abstract class Human {
         GregorianCalendar gc = new GregorianCalendar();
         int currentYear = gc.get(Calendar.YEAR);
 
-        if (surname == "") {
+        if (surname.intern() == "") {
             throw new IllegalArgumentException("You have not entered surname");
         }
 
-        if (name == "") {
+        if (name.intern() == "") {
             throw new IllegalArgumentException("You have not entered name");
         }
 

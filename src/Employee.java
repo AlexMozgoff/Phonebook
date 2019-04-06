@@ -1,14 +1,15 @@
 import java.io.*;
+import java.util.Collections;
 import java.util.LinkedList;
 
-public class Employee extends Human implements IReadableHuman {
+public class Employee extends Human implements Comparable<Human> {
 
     private static final File file = new File("Employees.txt");
     private String manager;
 
     public Employee(String surname, String name, int yearOfBirth, String phoneNumber, String manager) {
         super(surname, name, yearOfBirth, phoneNumber);
-        if (manager != "") {
+        if (manager.intern() != "") {
             this.manager = manager;
         } else throw new IllegalArgumentException("You have not entered manager name");
     }
@@ -21,7 +22,7 @@ public class Employee extends Human implements IReadableHuman {
         this.manager = manager;
     }
 
-    private String prepareString() {
+    public String toString() {
         return this.getSurname() + ", "
                 + this.getName() + ", "
                 + this.getYearOfBirth() + ", "
@@ -31,7 +32,7 @@ public class Employee extends Human implements IReadableHuman {
 
     @Override
     public void addToBook() {
-        String record = prepareString();
+        String record = toString();
         FileWorker.writeRecordToFile(file, record);
     }
 
@@ -48,6 +49,16 @@ public class Employee extends Human implements IReadableHuman {
             employees.add(employee);
         }
         return employees;
+    }
+
+    /*public static void sortBySurname(LinkedList<Employee> employees) {
+        Collections.sort(employees);
+    }*/
+
+    @Override
+    public int compareTo(Human employee) {
+        int result = this.getSurname().compareTo(employee.getSurname());
+        return result;
     }
 }
 

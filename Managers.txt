@@ -1,1 +1,1 @@
-Mini, Cooper, 1937, 18927413894, Sells;Vasin, Valentin, 1999, 88736123548, client;
+Vasin, Valentin, 1999, 88736123548, client;Kolesnikova, Anjelica, 1995, 123456123123, qweqweqwe;Sidorov, Sidor, 2003, 89276204466, Sidoria;Fomin, Ilya, 1953, 89053368453, Testing;
