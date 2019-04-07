@@ -22,6 +22,7 @@
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="2" />
           <entry key="project.open.time.26" value="1" />
@@ -31,7 +32,7 @@
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.55" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -41,7 +42,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11871" />
+          <entry key="JAVA" value="11885" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -69,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="479">
+              <caret line="193" column="40" selection-start-line="193" selection-start-column="40" selection-end-line="193" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#showInitialMessage#0;class#UI#0" />
@@ -111,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/FileWorker.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#loadRecords#0;class#FileWorker#0" />
@@ -136,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/src/Human.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="43" column="37" lean-forward="true" selection-start-line="42" selection-end-line="43" selection-end-column="37" />
+              <caret line="43" column="37" selection-start-line="42" selection-end-line="43" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Human#0;class#Human#0" />
@@ -198,8 +199,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,16 +294,18 @@
       <workItem from="1554571364129" duration="1493000" />
       <workItem from="1554572952538" duration="3179000" />
       <workItem from="1554612425270" duration="4315000" />
+      <workItem from="1554617203790" duration="671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50852000" />
+    <option name="totallyTimeSpent" value="51523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48081842" visible="true" weight="0.1651671" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48081842" visible="true" weight="0.16709511" />
       <window_info id="Structure" order="1" sideWeight="0.5191816" side_tool="true" weight="0.1651671" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -390,18 +393,6 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UI.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UI.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Manager.java</url>
           <line>9</line>
           <properties />
@@ -417,43 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="139" column="57" selection-start-line="139" selection-start-column="57" selection-end-line="139" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#loadRecords#0;class#FileWorker#0" />
-            <element signature="method#readFile#0;class#FileWorker#0" />
-            <element signature="method#writeRecordToFile#0;class#FileWorker#0" />
-            <element signature="method#rewriteFile#0;class#FileWorker#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" column="37" lean-forward="true" selection-start-line="42" selection-end-line="43" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Human#0;class#Human#0" />
-            <element signature="method#setSurname#0;class#Human#0" />
-            <element signature="method#setName#0;class#Human#0" />
-            <element signature="method#setYearOfBirth#0;class#Human#0" />
-            <element signature="method#setPhoneNumber#0;class#Human#0" />
-            <element signature="method#inputCheck#0;class#Human#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -488,10 +442,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#loadRecords#0;class#FileWorker#0" />
+            <element signature="method#readFile#0;class#FileWorker#0" />
+            <element signature="method#writeRecordToFile#0;class#FileWorker#0" />
+            <element signature="method#rewriteFile#0;class#FileWorker#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="43" column="37" selection-start-line="42" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Human#0;class#Human#0" />
+            <element signature="method#setSurname#0;class#Human#0" />
+            <element signature="method#setName#0;class#Human#0" />
+            <element signature="method#setYearOfBirth#0;class#Human#0" />
+            <element signature="method#setPhoneNumber#0;class#Human#0" />
+            <element signature="method#inputCheck#0;class#Human#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="479">
+          <caret line="193" column="40" selection-start-line="193" selection-start-column="40" selection-end-line="193" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#showInitialMessage#0;class#UI#0" />
