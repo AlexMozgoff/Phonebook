@@ -7,8 +7,13 @@ import java.util.Scanner;
 public class UI {
 
     private static Scanner in;
-    public static LinkedList<Employee> employees;
-    public static LinkedList<Manager> managers;
+    private static LinkedList<Employee> employees;
+    private static LinkedList<Manager> managers;
+
+    static {
+        employees = (LinkedList<Employee>)FileWorker.loadRecords(new File("Employees.txt"));
+        managers = (LinkedList<Manager>)FileWorker.loadRecords(new File("Managers.txt"));
+    }
 
     public static void showInitialMessage() {
         System.out.println("Enter a number to continue or type 'exit' to close\n" +
@@ -99,7 +104,7 @@ public class UI {
         System.out.println("\n");
     }
 
-    public static void addEmployee() {
+    private static void addEmployee() {
         in = new Scanner(System.in);
         System.out.println("Enter employee surname");
         String surname = in.nextLine();
@@ -118,7 +123,7 @@ public class UI {
 
     }
 
-    public static void addManager() {
+    private static void addManager() {
         in = new Scanner(System.in);
         System.out.println("Enter manager surname");
         String surname = in.nextLine();
@@ -136,7 +141,7 @@ public class UI {
         managers.add(manager);
     }
 
-    public static void deleteRecord() {
+    private static void deleteRecord() {
         in = new Scanner(System.in);
         System.out.println("Enter the index of the row to be deleted");
         int index = in.nextInt();
@@ -150,7 +155,7 @@ public class UI {
         } else throw new IndexOutOfBoundsException("Wrong index has been entered");
     }
 
-    public static void searchBySurname() {
+    private static void searchBySurname() {
         in = new Scanner(System.in);
         System.out.println("Enter surname");
         String surname = in.nextLine();
@@ -166,7 +171,7 @@ public class UI {
         }
     }
 
-    public static void searchByName() {
+    private static void searchByName() {
         in = new Scanner(System.in);
         System.out.println("Enter name");
         String name = in.nextLine();
@@ -182,7 +187,7 @@ public class UI {
         }
     }
 
-    public static void searchByPhone() {
+    private static void searchByPhone() {
         in = new Scanner(System.in);
         System.out.println("Enter phone number");
         String phone = in.nextLine();
@@ -198,11 +203,11 @@ public class UI {
         }
     }
 
-    public static void sortBySurname(LinkedList<? extends Human> employees) {
+    private static void sortBySurname(LinkedList<? extends Human> employees) {
         Collections.sort(employees);
     }
 
-    public static void sortByYear() {
+    private static void sortByYear() {
         Comparator<Human> yearComparator = new Comparator<Human>() {
             @Override
             public int compare(Human o1, Human o2) {
@@ -215,20 +220,6 @@ public class UI {
         Collections.sort(employees, yearComparator);
         Collections.sort(managers, yearComparator);
     }
-
-    /*private LinkedList<? extends Human> sort(LinkedList<T> records) {
-        for (int i = 0; i < records.size(); i++) {
-            for (int j = 0; j < records.size(); j++) {
-                if (((Human)records.get(i)).getYearOfBirth() > ((Human)records.get(j)).getYearOfBirth()) {
-                    var temp = "te";
-                    (Human)records.get(i) = (Human)records.get(j);
-                    ((Human)records.get(j)).setYearOfBirth(temp);
-                }
-            }
-        }
-        return records;
-    }*/
-
 
     public static void clearConsole() {
         for (int i = 0; i < 100; i++) {

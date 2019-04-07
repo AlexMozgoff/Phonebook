@@ -1,6 +1,4 @@
 import java.io.File;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.LinkedList;
 
 public class Manager extends Human implements Comparable<Human> {
@@ -32,10 +30,6 @@ public class Manager extends Human implements Comparable<Human> {
         String record = toString();
         FileWorker.writeRecordToFile(file, record);
     }
-
-    /*public static void sortBySurname(LinkedList<Manager> managers) {
-        Collections.sort(managers);
-    }*/
 
     public String toString() {
         return this.getSurname() + ", "

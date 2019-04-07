@@ -1,10 +1,7 @@
 import java.io.*;
 import java.util.LinkedList;
 
-public class FileWorker<T> {
-
-    private static final File employeeFile = new File("Employees.txt");
-    private static final File managerFile = new File("Managers.txt");
+public class FileWorker {
 
     public static LinkedList<? extends Human> loadRecords(File file) {
         String textFromFile = readFile(file);
@@ -37,7 +34,6 @@ public class FileWorker<T> {
         }
         return null;
     }
-
 
     public static void writeRecordToFile(File file, String record) {
         try {

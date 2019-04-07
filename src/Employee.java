@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Collections;
 import java.util.LinkedList;
 
 public class Employee extends Human implements Comparable<Human> {
@@ -50,10 +49,6 @@ public class Employee extends Human implements Comparable<Human> {
         }
         return employees;
     }
-
-    /*public static void sortBySurname(LinkedList<Employee> employees) {
-        Collections.sort(employees);
-    }*/
 
     @Override
     public int compareTo(Human employee) {
