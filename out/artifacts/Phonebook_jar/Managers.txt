@@ -1,1 +1,1 @@
-Vasin, Valentin, 1999, 88736123548, client;Kolesnikova, Anjelica, 1995, 123456123123, qweqweqwe;Sidorov, Sidor, 2003, 89276204466, Sidoria;Fomin, Ilya, 1953, 89053368453, Testing;
+Fomin, Ilya, 1953, 89053368453, Testing;Kolesnikova, Anjelica, 1995, 123456123123, qweqweqwe;Kazakov, Alexander, 1998, 89273278856, Front-end;Vasin, Valentin, 1999, 88736123548, client;Sidorov, Sidor, 2003, 89276204466, Sidoria;

@@ -10,7 +10,7 @@ public class Main {
         while (userAction != "exit") {
             UI.showInitialMessage();
             userAction = in.nextLine();
-            UI.chooseAction(userAction);
+            Logic.chooseAction(userAction);
         }
     }
 }

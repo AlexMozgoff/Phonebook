@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class FileWorker {
 
@@ -51,7 +52,7 @@ public class FileWorker {
     }
 
     public static void rewriteFile(File file, LinkedList<? extends Human> records) {
-        if (file.delete()) System.out.println("File deleted");
+        if (file.delete()) System.out.println();
         if (records.get(0).getClass().getSimpleName() == "Employee") {
             for (int i = 0; i < records.size(); i++) {
                 Employee employee = (Employee) records.get(i);

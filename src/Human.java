@@ -9,11 +9,28 @@ public abstract class Human implements Comparable<Human> {
     private String phoneNumber;
 
     public Human(String surname, String name, int yearOfBirth, String phoneNumber) {
-        this.surname = surname;
-        this.name = name;
-        this.yearOfBirth = yearOfBirth;
-        this.phoneNumber = phoneNumber;
-        inputCheck(surname, name, yearOfBirth, phoneNumber);
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        int currentYear = gregorianCalendar.get(Calendar.YEAR);
+        if (surname.intern() != "")
+        {
+            this.surname = surname;
+        }
+        else throw new IllegalArgumentException("You have entered empty surname");
+        if (name.intern() != "")
+        {
+            this.name = name;
+        }
+        else throw new IllegalArgumentException("You have entered empty name");
+        if (yearOfBirth > 1900 && yearOfBirth <= currentYear)
+        {
+            this.yearOfBirth = yearOfBirth;
+        }
+        else throw new IllegalArgumentException("You have entered empty year of birth");
+        if (phoneNumber.intern() != "")
+        {
+            this.phoneNumber = phoneNumber;
+        }
+        else throw new IllegalArgumentException("You have entered empty phone number");
     }
 
     public String getSurname() {
@@ -67,27 +84,6 @@ public abstract class Human implements Comparable<Human> {
             System.out.println("You have entered empty phone number");
         }
         this.phoneNumber = phoneNumber;
-    }
-
-    private void inputCheck(String surname, String name, int yearOfBirth, String phoneNumber) {
-        GregorianCalendar gc = new GregorianCalendar();
-        int currentYear = gc.get(Calendar.YEAR);
-
-        if (surname.intern() == "") {
-            throw new IllegalArgumentException("You have not entered surname");
-        }
-
-        if (name.intern() == "") {
-            throw new IllegalArgumentException("You have not entered name");
-        }
-
-        if (phoneNumber.intern() == "") {
-            throw new IllegalArgumentException("You have not entered phone number");
-        }
-
-        if (yearOfBirth < 1900 || yearOfBirth > currentYear) {
-            throw new IllegalArgumentException("You have entered wrong year");
-        }
     }
 
     public abstract void addToBook();
