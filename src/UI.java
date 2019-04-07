@@ -79,6 +79,8 @@ public class UI {
                 showRecords();
                 break;
             case "exit":
+                FileWorker.rewriteFile(new File("Employees.txt"), employees);
+                FileWorker.rewriteFile(new File("Managers.txt"), managers);
                 System.exit(0);
         }
     }
@@ -161,14 +163,15 @@ public class UI {
         String surname = in.nextLine();
         for (int i = 0; i < employees.size(); i++) {
             if (employees.get(i).getSurname().equals(surname)) {
-                System.out.println(employees.get(i).toString() + "\n");
+                System.out.println(employees.get(i).toString());
             }
         }
         for (int i = 0; i < managers.size(); i++) {
             if (managers.get(i).getSurname().equals(surname)) {
-                System.out.println(managers.get(i).toString() + "\n");
+                System.out.println(managers.get(i).toString());
             }
         }
+        System.out.println();
     }
 
     private static void searchByName() {
@@ -177,14 +180,15 @@ public class UI {
         String name = in.nextLine();
         for (int i = 0; i < employees.size(); i++) {
             if (employees.get(i).getName().equals(name)) {
-                System.out.println(employees.get(i).toString() + "\n");
+                System.out.println(employees.get(i).toString());
             }
         }
         for (int i = 0; i < managers.size(); i++) {
             if (managers.get(i).getName().equals(name)) {
-                System.out.println(managers.get(i).toString() + "\n");
+                System.out.println(managers.get(i).toString());
             }
         }
+        System.out.println();
     }
 
     private static void searchByPhone() {
@@ -201,6 +205,7 @@ public class UI {
                 System.out.println(managers.get(i).toString());
             }
         }
+        System.out.println();
     }
 
     private static void sortBySurname(LinkedList<? extends Human> employees) {

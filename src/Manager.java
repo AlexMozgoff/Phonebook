@@ -26,17 +26,18 @@ public class Manager extends Human implements Comparable<Human> {
         }
     }
 
-    public void addToBook() {
-        String record = toString();
-        FileWorker.writeRecordToFile(file, record);
-    }
-
     public String toString() {
         return this.getSurname() + ", "
                 + this.getName() + ", "
                 + this.getYearOfBirth() + ", "
                 + this.getPhoneNumber() + ", "
                 + this.getDepartment() + ";";
+    }
+
+    @Override
+    public void addToBook() {
+        String record = toString();
+        FileWorker.writeRecordToFile(file, record);
     }
 
     public static LinkedList<Manager> getManagersList(String[] splittedText) {
